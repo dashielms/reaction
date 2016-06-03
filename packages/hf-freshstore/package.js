@@ -7,6 +7,28 @@ Package.describe({
 Package.onUse(function (api) {
 	api.versionsFrom("METEOR@1.3");
 
+	api.use("meteor-base");
+	api.use("mongo");
+	api.use("ecmascript");
+	api.use("es5-shim");
+	api.use("blaze-html-templates");
+	api.use("session");
+	api.use("jquery");
+	api.use("tracker");
+
+	// meteor add-on packages
+	api.use("underscore");
+	api.use("logging");
+	api.use("reload");
+	api.use("random");
+	api.use("ejson");
+	api.use("check");
+	api.use("http");
+	api.use("reactive-var");
+	api.use("reactive-dict");
+
+	api.addFiles("server/register.js", "server");
+
 	// Tells meteor to use the LESS precompiler.
 	// Any included LESS files must appear below this use() call in order to be compiled.  
 	api.use("less");
