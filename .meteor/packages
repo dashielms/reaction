@@ -67,7 +67,7 @@ reactioncommerce:reaction-sample-data   # default Reaction data
 
 # Themes
 #reactioncommerce:default-theme          # default Reaction theme
-my:custom-theme                       # Example custom theme
+dash:fresh                       # Example custom theme
 
 # Forced version updates
 # mdg:validation-error@0.5.1
