@@ -9,6 +9,7 @@
 
 !hf-freshstore
 !hf-freshstore/*
+!hf-freshstore/styles/*
 
 !reaction-accounts
 !reaction-analytics
