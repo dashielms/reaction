@@ -1,9 +1,9 @@
 Package.describe({
   // Name of your package
-  name: "dash:fresh",
+  name: "hf:themetest",
 
   // Brief summary or title of your package
-  summary: "HeadFresh Theme",
+  summary: "Test Theme",
 
   // Version number of your theme package
   version: "0.1.0"
@@ -15,6 +15,9 @@ Package.onUse(function (api) {
 
   // Use a preprocessor, LESS CSS in this case.
   api.use("less");
+
+  // Used by rc:core-theme and rc:default-theme for image icons
+  // TODO: profile pics (?)
   api.use("fortawesome:fontawesome@4.5.0");
 
 

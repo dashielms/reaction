@@ -1,5 +1,5 @@
 Package.describe({
-	name: "head-fresh:head-fresh",
+	name: "hf:freshstore",
 	summary: "Head Fresh Custom Store",
 	version: "0.1.0"
 });
