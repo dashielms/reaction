@@ -4,6 +4,12 @@
 !my-custom-theme-template
 !my-custom-theme-template/*
 
+!dash-fresh
+!dash-fresh/*
+
+!head-fresh
+!head-fresh/*
+
 !reaction-accounts
 !reaction-analytics
 !reaction-analytics-libs
