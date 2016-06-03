@@ -7,6 +7,7 @@ Package.describe({
 Package.onUse(function (api) {
 	api.versionsFrom("METEOR@1.3");
 
+	// core meteor dependencies
 	api.use("meteor-base");
 	api.use("mongo");
 	api.use("ecmascript");
@@ -27,18 +28,42 @@ Package.onUse(function (api) {
 	api.use("reactive-var");
 	api.use("reactive-dict");
 
-	api.addFiles("server/register.js", "server");
+	// reaction package dependencies
+  api.use("reactioncommerce:core@0.13.0");
 
-	// Tells meteor to use the LESS precompiler.
-	// Any included LESS files must appear below this use() call in order to be compiled.  
+  // theme dependencies
 	api.use("less");
-
-	// Tells meteor to use styles defined in rc:core-theme (identical to rc:default-theme)
 	api.use("reactioncommerce:core-theme@2.0.0");
 
-	// TODO: Paths should be only on the client (i.e. client/styles/variables.less, etc)
-	api.addFiles("styles/variables.less", "client", {isImport: true});
-  api.addFiles("styles/base.less", "client", {isImport: true});
-	api.addFiles("main.less", "client");
+	// server files
+	api.addFiles("server/register.js", "server");
+  api.addFiles("server/load.js", "server");
+
+  // private fixture data
+  api.addAssets("private/data/Products.json", "server");
+  api.addAssets("private/data/Shops.json", "server");
+  api.addAssets("private/data/Tags.json", "server");
+
+	// client files
+	api.addFiles("client/styles/variables.less", "client", {isImport: true});
+  api.addFiles("client/styles/base.less", "client", {isImport: true});
+	api.addFiles("client/main.less", "client");
+
+	// template files
+	api.addFiles("client/templates/layouts/core.html", "client");
+  api.addFiles("client/templates/products/productsLanding.html", "client");
+  api.addFiles("client/templates/products/productsLanding.js", "client");
+  api.addFiles("client/templates/products/productGrid/productGrid.html", "client");
+  api.addFiles("client/templates/products/productGrid/productGrid.js", "client");
+  api.addFiles("client/templates/products/productGrid/content/content.html", "client");
+  api.addFiles("client/templates/products/productGrid/content/content.js", "client");
+  api.addFiles("client/templates/products/productGrid/controls/controls.html", "client");
+  api.addFiles("client/templates/products/productGrid/controls/controls.js", "client");
+  api.addFiles("client/templates/products/productGrid/item/item.html", "client");
+  api.addFiles("client/templates/products/productGrid/item/item.js", "client");
+  api.addFiles("client/templates/products/productGrid/notice/notice.html", "client");
+  api.addFiles("client/templates/products/productGrid/notice/notice.js", "client");
+  api.addFiles("client/templates/products/productList/productList.html", "client");
+  api.addFiles("client/templates/products/productList/productList.js", "client");
 
 });

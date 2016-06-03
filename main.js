@@ -1,2 +1,2 @@
 DEFAULT_LAYOUT = "coreLayoutFreshstore";
-DEFAULT_WORKFLOW + "coreWorkflow"
+DEFAULT_WORKFLOW = "coreWorkflow";
